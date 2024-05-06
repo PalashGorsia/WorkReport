@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="dataQ"
+            type="com.app.workreport.model.Todo" />
+        <variable
+            name="isEditable"
+            type="Boolean" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:id="@+id/backgroundCL"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <LinearLayout
+            android:id="@+id/llTopTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/indexTV"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/_1sdp"
+            android:layout_height="18dip"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:fontFamily="@font/poppins_regular"
+            android:background="@drawable/shape_todo"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_11ssp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingTop="@dimen/_3sdp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toEndOf="@+id/indexTV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/llTopTitle">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btOK"
+                style="@style/buttonStyle"
+                android:clickable="@{isEditable}"
+                android:text="O" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btNG"
+                style="@style/buttonStyle"
+                android:clickable="@{isEditable}"
+                android:text="NG" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btNotChecked"
+                style="@style/buttonStyle"
+                android:clickable="@{isEditable}"
+                android:text="NC" />
+
+            <ImageButton
+                android:id="@+id/ibEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:background="@drawable/ic_edit2"
+                android:contentDescription="backward_button" />
+
+            <ImageButton
+                android:id="@+id/ibCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/ic_camera2"
+                android:contentDescription="backward_button" />
+
+            <!--android:backgroundTint="@color/grey_li"-->
+
+            <ImageButton
+                android:id="@+id/ibGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:background="@android:color/transparent"
+                android:contentDescription="backward_button"
+                android:src="@drawable/ic_guide" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btSubmit"
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/llContainer"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/shape_login_button"
+            android:fontFamily="@font/poppins_regular"
+            android:minWidth="0dip"
+            android:minHeight="0dip"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15ssp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

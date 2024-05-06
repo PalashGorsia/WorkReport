@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp16"
+    android:background="@android:color/transparent"
+    tools:ignore="MissingDefaultResource">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp69"
+                android:layout_height="@dimen/dp69"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp16"
+                android:background="@drawable/ic_group_1359">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_non_stop_"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:fontFamily="@font/poppins_regular"
+                android:id="@+id/textInfo"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="@string/lost_sever_connection"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp16"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/appCompatButtonYes"
+                    android:layout_width="@dimen/dp175"
+                    android:layout_height="@dimen/dp50"
+                    android:background="@drawable/btn_blue_back"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/ok"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

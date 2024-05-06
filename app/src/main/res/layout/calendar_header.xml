@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/green">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/exFourHeaderText"
+        android:textColor="@color/white"
+        tools:text="October 2019"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/poppins_bold"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_below="@+id/exFourHeaderText"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_11ssp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/weekend_color"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/sun"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_11ssp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/mon"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_11ssp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/tue"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_11ssp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/wed"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_11ssp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/thu"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_11ssp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/fri"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_11ssp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/weekend_color"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/sat"/>
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

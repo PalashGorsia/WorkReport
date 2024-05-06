@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/layTar"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboard.ui.work.addTarget.AddTargetFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/lay_toolbar"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="@dimen/dp5"/>
+<!--
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/rvAddTarget"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_view_add_target"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"/>
+-->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginTop="@dimen/dp14"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/target_name"
+        android:text="@string/target_name"
+        android:theme="@style/TextStyleWorkReportSmall"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etTargetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"
+        app:layout_constraintTop_toBottomOf="@+id/target_name"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/light_gray_border"
+        android:inputType="textNoSuggestions"
+        android:minHeight="@dimen/dp40"
+        android:text=""
+        android:textColor="@color/text_black"
+        android:theme="@style/TextSimpleStyle" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:id="@+id/layCheckBox"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/etTargetName">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/shooting_type"
+            android:theme="@style/TextStyleWorkReportSmall"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/before"
+            style="@style/TextSimpleStyleTablet"
+            app:layout_constraintEnd_toStartOf="@+id/isAfter"
+            android:id="@+id/isBefore"
+            android:checked="true"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/isAfter"
+            android:text="@string/text_after"
+            style="@style/TextSimpleStyleTablet"
+            app:layout_constraintStart_toEndOf="@+id/isBefore"
+            app:layout_constraintTop_toBottomOf="@+id/etTargetName"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/isAtWork"
+            android:text="@string/at_work"
+            style="@style/TextSimpleStyleTablet"
+            app:layout_constraintStart_toEndOf="@+id/isAfter"
+            app:layout_constraintTop_toBottomOf="@+id/etTargetName"
+            android:layout_weight="1"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_height="@dimen/dp58"
+        android:layout_alignParentBottom="true"
+       app:layout_constraintTop_toBottomOf="@+id/layCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight="6"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp5"
+        android:text="@string/save"
+        android:theme="@style/ButtonStyle"
+        android:visibility="visible" />
+<!--
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddRow"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/dp58"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="4"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:text="@string/add_row"
+        android:theme="@style/ButtonStyle"
+        android:visibility="visible"
+         />
+-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSendReport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp58"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp5"
+        android:layout_weight="1"
+        android:text="@string/send_report"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/sp16"
+        android:theme="@style/ButtonStyle"
+        android:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

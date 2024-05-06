@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/_15sdp"
+    android:layout_marginRight="@dimen/_15sdp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:padding="@dimen/_5sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/add_info"
+                android:textColor="#777777"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:id="@+id/ivCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="close"
+                android:src="@drawable/ic_cross"
+               android:layout_gravity="end" />
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etFirstComment"
+            android:gravity="start"
+            android:hint="@string/additional_comment"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text"
+            android:fontFamily="@font/poppins_regular"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/login_grey"
+            />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSecondComment"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="start"
+        android:hint="@string/recipient_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edit_text"
+        android:fontFamily="@font/poppins_regular"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/login_grey"
+        />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/shape_login_button"
+            android:fontFamily="@font/poppins_regular"
+            android:minWidth="0dip"
+            android:minHeight="0dip"
+            android:paddingStart="@dimen/_25sdp"
+            android:paddingEnd="@dimen/_25sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15ssp" />
+
+
+</LinearLayout>

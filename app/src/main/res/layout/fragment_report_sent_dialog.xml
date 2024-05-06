@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+       >
+        <ImageView
+            android:id="@+id/ivCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_cross"
+            android:layout_gravity="end" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_69sdp"
+        android:layout_height="@dimen/_69sdp"
+        android:scaleType="center"
+        android:src="@drawable/ic_item_health"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/_15ssp"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:textColor="@android:color/black"
+        android:text="@string/report_sent"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="#777777"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textAlignment="center"
+            android:text="@string/your_report_is_sent_to_admin"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:text="@string/close"
+            android:paddingStart="@dimen/_35sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_35sdp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_15ssp"
+            android:id="@+id/btClose"
+            android:minHeight="0dip"
+            android:textAllCaps="false"
+            android:minWidth="0dip"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/shape_login_button"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
+</FrameLayout>

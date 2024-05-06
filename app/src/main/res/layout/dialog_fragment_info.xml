@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:background="@android:color/white"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+       >
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvReportSent"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@android:color/black"
+        android:text="@string/reference_example"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/ivCross"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_cross"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintTop_toBottomOf="@+id/tvReportSent"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:id="@+id/tvText"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#777777"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

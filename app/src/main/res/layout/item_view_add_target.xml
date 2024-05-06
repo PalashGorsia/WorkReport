@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="trData"
+            type="com.app.workreport.data.model.TargetData" />
+
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp14"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/target_name"
+        android:text="@string/target_name"
+        android:theme="@style/TextStyleWorkReportSmall"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etTargetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"
+        app:layout_constraintTop_toBottomOf="@+id/target_name"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/light_gray_border"
+        android:inputType="textNoSuggestions"
+        android:minHeight="@dimen/dp40"
+        android:text="@{trData.name}"
+        android:textColor="@color/text_black"
+        android:theme="@style/TextSimpleStyle" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/etTargetName">
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/before"
+            style="@style/TextSimpleStyleTablet"
+            app:layout_constraintEnd_toStartOf="@+id/isAfter"
+            android:id="@+id/isBefore"
+            android:checked="@{trData.before}"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/isAfter"
+            android:checked="@{trData.after}"
+            android:text="@string/text_after"
+            style="@style/TextSimpleStyleTablet"
+            app:layout_constraintStart_toEndOf="@+id/isBefore"
+            app:layout_constraintTop_toBottomOf="@+id/etTargetName"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/isAtWork"
+            android:text="@string/at_work"
+            android:checked="@{trData.atWork}"
+            style="@style/TextSimpleStyleTablet"
+            app:layout_constraintStart_toEndOf="@+id/isAfter"
+            app:layout_constraintTop_toBottomOf="@+id/etTargetName"
+            android:layout_weight="1"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

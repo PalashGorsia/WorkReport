@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="isSelectComplete"
+            type="Boolean" />
+        <variable
+            name="isSelectProgress"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.card.MaterialCardView
+            android:theme="@style/CustomCardViewStyle"
+            android:layout_width="match_parent"
+            android:elevation="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_height="@dimen/dp320">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp25"
+                    android:layout_weight="1"
+                    android:text="@string/select_status"
+                    android:theme="@style/TextStyleReport"
+                    android:id="@+id/text_status"/>
+
+
+                <include layout="@layout/lay_devider"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_status"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginEnd="@dimen/dp25"
+                    android:id="@+id/de1"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/text_complete"
+                    app:layout_constraintTop_toBottomOf="@+id/de1">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp25"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="@string/complete"
+                        android:theme="@style/TextStylePR16" />
+
+                    <ImageView
+                        android:id="@+id/checked_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="@{isSelectComplete?View.VISIBLE:View.GONE,default =gone}"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:layout_marginEnd="@dimen/dp25"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_right_check" />
+
+                </RelativeLayout>
+
+
+
+                <include layout="@layout/lay_devider"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_complete"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginEnd="@dimen/dp25"
+                    android:id="@+id/de2"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/de2"
+                    android:id="@+id/text_inprogress">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp25"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="@string/text_inprogress"
+                        android:theme="@style/TextStylePR16" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:visibility="@{isSelectProgress?View.VISIBLE:View.GONE,default =gone}"
+                        android:layout_alignParentEnd="true"
+                        app:srcCompat="@drawable/ic_right_check"
+                        android:layout_marginEnd="@dimen/dp25"
+                        android:id="@+id/checked_inprogress"/>
+
+
+                </RelativeLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</layout>

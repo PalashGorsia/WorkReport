@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layImage"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp242"
+            android:layout_margin="@dimen/dp22"
+            android:scaleType="fitXY"
+            android:id="@+id/imageView"
+            android:src="@drawable/splash_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/TextSimpleStyle"
+            android:textAlignment="center"
+            android:id="@+id/textInfo"
+            android:textColor="@color/text_black"
+            android:text="@string/are_you_sure_you_won_t_to_naccept_this_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            style="@style/ButtonStyleImage"
+            app:iconTintMode="src_in"
+            android:layout_marginStart="@dimen/dp22"
+            android:layout_marginEnd="@dimen/dp22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInfo"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/select"
+            android:id="@+id/btnSelect"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginStart="@dimen/dp22"
+            android:layout_marginEnd="@dimen/dp22"
+            style="@style/ButtonStyleImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelect"
+            android:layout_marginTop="@dimen/dp2"
+            android:text="@string/reserve"
+            android:id="@+id/btnReserve"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginStart="@dimen/dp22"
+            android:layout_marginEnd="@dimen/dp22"
+            style="@style/ButtonStyleImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnReserve"
+            android:layout_marginTop="@dimen/dp2"
+            android:text="@string/discard"
+            android:id="@+id/btnDiscard"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp16"
+            app:layout_constraintTop_toBottomOf="@+id/btnDiscard"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

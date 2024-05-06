@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+
+
+
+    <string-array name="arr_after">
+        <item>@string/text_after</item>
+        <item>@string/text_before</item>
+<!--        <item>Ultra Marathon</item>-->
+    </string-array>
+    <string-array name="arr_before">
+        <item>@string/text_before</item>
+        <item>@string/text_after</item>
+<!--        <item>Ultra Marathon</item>-->
+    </string-array>
+
+
+</resources>

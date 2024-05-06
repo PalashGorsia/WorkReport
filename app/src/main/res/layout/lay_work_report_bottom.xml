@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="showAddMore"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--android:visibility="@{showAddMore?View.GONE:View.VISIBLE}"-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnAddMore"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp5"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardUseCompatPadding="true"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            app:layout_constraintTop_toTopOf="parent">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:text="@string/add_more"
+                    android:textColor="@color/text_black"
+                    android:theme="@style/TextSimpleStyle"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            app:cardBackgroundColor="@color/white"
+            app:cardUseCompatPadding="true"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddMore">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:orientation="vertical">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/target_name"
+                    android:text="@string/comment"
+                    android:theme="@style/TextStyleWorkReportSmall"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp90"
+                    app:layout_constraintTop_toBottomOf="@+id/target_name"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:background="@drawable/light_gray_border"
+                    android:inputType="textMultiLine"
+                    android:isScrollContainer="true"
+                    android:textIsSelectable="true"
+                    android:scrollbars="vertical"
+                    android:textColorHint="@color/text_black"
+                    android:textColor="@color/text_black"
+                    android:hint="@string/write_here"
+                    android:gravity="top"
+                    android:padding="@dimen/dp10"
+                    android:theme="@style/TextSimpleStyle" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="android.content.Context" />
+        <variable
+            name="reportList"
+            type="com.app.workreport.data.model.ReportData" />
+        <variable
+            name="isImageFirst"
+            type="Boolean" />
+        <variable
+            name="isImageAtWork"
+            type="Boolean" />
+        <variable
+            name="isImageSecond"
+            type="Boolean" />
+        <variable
+            name="isRemove"
+            type="Boolean" />
+        <variable
+            name="image1"
+            type="String" />
+        <variable
+            name="imageAtWork"
+            type="String" />
+        <variable
+            name="image2"
+            type="String" />
+        <variable
+            name="commentFirst"
+            type="String" />
+        <variable
+            name="commentSecond"
+            type="String" />
+        <variable
+            name="commentThird"
+            type="String" />
+
+        <variable
+            name="isEdit"
+            type="Boolean" />
+
+        <variable
+            name="isShootingType1"
+            type="Boolean" />
+        <variable
+            name="isShootingType2"
+            type="Boolean" />
+        <variable
+            name="isShootingType3"
+            type="Boolean" />
+        <variable
+            name="shootingName1"
+            type="String" />
+        <variable
+            name="shootingName2"
+            type="String" />
+        <variable
+            name="shootingName3"
+            type="String" />
+
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp14">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/target_name"
+                android:text="@string/target_name"
+                android:theme="@style/TextStyleWorkReportSmall"/>
+<!-- android:visibility="@{isRemove?View.VISIBLE:View.GONE}"-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_remove"
+                android:layout_marginTop="@dimen/dp12"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/btnRemoveCell"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etTargetName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp10"
+                android:enabled="@{isEdit}"
+                app:layout_constraintTop_toBottomOf="@+id/target_name"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/light_gray_border"
+                android:inputType="textNoSuggestions"
+                android:text="@{reportList.targetName}"
+                android:minHeight="@dimen/dp40"
+                android:textColor="@color/text_black"
+                android:theme="@style/TextSimpleStyle" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                app:layout_constraintTop_toBottomOf="@+id/etTargetName"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_weight="1"
+                    android:visibility="@{isShootingType1?View.VISIBLE:View.INVISIBLE}"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp14"
+                        android:text="@string/shooting_type"
+                        android:theme="@style/TextStyleWorkReportSmall"/>
+
+
+
+                        <TextView
+                            android:id="@+id/spShootingTypeFirst"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp40"
+                            android:background="@drawable/light_gray_border"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:text="@{shootingName1}"
+                            android:gravity="center|start"
+                            android:textColor="@color/text_black"
+                            android:theme="@style/TextSimpleStyle" />
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp250"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:visibility="@{isImageFirst?View.GONE:View.VISIBLE}"
+                        android:background="@drawable/dotted_line">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/btnSelectImageFirst"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp12"
+                                android:src="@drawable/ic_select_image"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/tap_to_upload"
+                                android:textColor="#B0B0B0"
+                                android:theme="@style/TextSimpleStyle" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp250"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/dotted_line"
+                        android:visibility="@{isImageFirst?View.VISIBLE:View.GONE,default =gone}">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dp5"
+                            bindImage="@{image1}"
+                            android:scaleType="fitXY"
+                            android:id="@+id/imageView1"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:id="@+id/noImage1"
+                            android:text="@string/no_image"
+                            android:textColor="#B0B0B0"
+                            android:theme="@style/TextSimpleStyle" />
+
+
+
+                    </RelativeLayout>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/commentBf"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp90"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:isScrollContainer="true"
+                        android:textIsSelectable="true"
+                        android:scrollbars="vertical"
+                        android:background="@drawable/light_gray_border"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:paddingTop="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:hint="@string/add_comment"
+                        android:enabled="@{isEdit}"
+                        android:text="@{commentFirst}"
+                        android:gravity="top|start"
+                        android:textColor="@color/text_black"
+                        android:theme="@style/TextSimpleStyle"
+                        android:textSize="@dimen/sp12"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:visibility="@{isShootingType2?View.VISIBLE:View.INVISIBLE}"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp14"
+                        android:text="@string/shooting_type"
+                        android:theme="@style/TextStyleWorkReportSmall"/>
+                    <TextView
+                        android:id="@+id/spShootingTypeSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:background="@drawable/light_gray_border"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@{shootingName2}"
+                        android:gravity="center|start"
+                        android:textColor="@color/text_black"
+                        android:theme="@style/TextSimpleStyle" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp250"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:visibility="@{isImageSecond?View.GONE:View.VISIBLE}"
+                        android:background="@drawable/dotted_line">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/btnSelectImageSecond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp12"
+                                android:src="@drawable/ic_select_image"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp8"
+                                android:text="@string/tap_to_upload"
+                                android:textColor="#B0B0B0"
+                                android:theme="@style/TextSimpleStyle" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp250"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/dotted_line"
+                        android:visibility="@{isImageSecond?View.VISIBLE:View.GONE,default =gone}">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dp5"
+                            android:scaleType="fitXY"
+                            bindImage="@{image2}"
+                            android:id="@+id/imageView2"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/noImage2"
+                            android:text="@string/no_image"
+                            android:textColor="#B0B0B0"
+                            android:theme="@style/TextSimpleStyle" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/commentAf"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp90"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:isScrollContainer="true"
+                        android:textIsSelectable="true"
+                        android:scrollbars="vertical"
+                        android:background="@drawable/light_gray_border"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@{commentSecond}"
+                        android:enabled="@{isEdit}"
+                        android:paddingTop="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:hint="@string/add_comment"
+                        android:gravity="top|start"
+                        android:textColor="@color/text_black"
+                        android:theme="@style/TextSimpleStyle"
+                        android:textSize="@dimen/sp12"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{isShootingType3?View.VISIBLE:View.GONE}"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp14"
+                            android:text="@string/shooting_type"
+                            android:theme="@style/TextStyleWorkReportSmall"/>
+
+
+
+                        <TextView
+                            android:id="@+id/spShootingTypeAtWork"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp40"
+                            android:background="@drawable/light_gray_border"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:text="@{shootingName3}"
+                            android:gravity="center|start"
+                            android:textColor="@color/text_black"
+                            android:theme="@style/TextSimpleStyle" />
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp250"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:visibility="@{isImageAtWork?View.GONE:View.VISIBLE}"
+                            android:background="@drawable/dotted_line">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/btnSelectImageAtWork"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp12"
+                                    android:src="@drawable/ic_select_image"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/tap_to_upload"
+                                    android:textColor="#B0B0B0"
+                                    android:theme="@style/TextSimpleStyle" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp250"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="@drawable/dotted_line"
+                            android:visibility="@{isImageAtWork?View.VISIBLE:View.GONE,default =gone}">
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/dp5"
+                                bindImage="@{imageAtWork}"
+                                android:scaleType="fitXY"
+                                android:id="@+id/imageViewAtwork"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="@dimen/dp8"
+                                android:id="@+id/noImageAtWork"
+                                android:text="@string/no_image"
+                                android:textColor="#B0B0B0"
+                                android:theme="@style/TextSimpleStyle" />
+
+
+
+                        </RelativeLayout>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/commentAtWork"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp90"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:isScrollContainer="true"
+                            android:textIsSelectable="true"
+                            android:scrollbars="vertical"
+                            android:background="@drawable/light_gray_border"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:paddingTop="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:hint="@string/add_comment"
+                            android:enabled="@{isEdit}"
+                            android:text="@{commentThird}"
+                            android:gravity="top|start"
+                            android:textColor="@color/text_black"
+                            android:theme="@style/TextSimpleStyle"
+                            android:textSize="@dimen/sp12"/>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <View
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

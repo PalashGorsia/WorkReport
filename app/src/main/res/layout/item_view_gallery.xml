@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="isImageSelected"
+            type="Boolean" />
+        <variable
+            name="imageData"
+            type="String" />
+
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="85dp"
+        android:layout_height="122dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="2dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="1dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:elevation="@dimen/_10sdp"
+                android:button="@drawable/select_image"
+                android:theme="@style/checkBok" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                bindImage="@{imageData}"
+                android:scaleType="fitXY"
+                android:id="@+id/imageView"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/white_border"
+                android:visibility="@{isImageSelected?View.VISIBLE:View.GONE}">
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>
+
+
+
+
+

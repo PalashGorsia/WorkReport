@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="leaveList"
+            type="com.app.workreport.model.LeaveData" />
+        <variable
+            name="showCancel"
+            type="Boolean" />
+    </data>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardView"
+            android:background="#ffff">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card:cardUseCompatPadding="true"
+                card:cardElevation="@dimen/_2sdp"
+                card:cardCornerRadius="@dimen/_5sdp"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_8sdp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/dateIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/calendar" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8"
+                        android:layout_marginEnd="@dimen/dp8"
+                        bindDateLeave="@{leaveList.date}"
+                        android:layout_toEndOf="@+id/dateIcon"
+                        android:theme="@style/TextStyleDashboardDate" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_toEndOf="@+id/dateIcon"
+                        android:layout_below="@+id/textDate"
+                        android:layout_marginEnd="@dimen/dp8"
+                        android:inputType="textCapSentences"
+                        bindType="@{leaveList.type}"
+                        android:theme="@style/TextStyleDashboardDate" />
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/deleteIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:src="@drawable/ic_delete" />
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+
+
+</layout>

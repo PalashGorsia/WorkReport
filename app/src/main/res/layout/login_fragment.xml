@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <import type="android.view.View"/>
+    <import type="com.app.workreport.container.BaseEvent"/>
+    <variable
+        name="isNoValidate"
+        type="Boolean" />
+    <variable
+        name="viewModelLoin"
+        type="com.app.workreport.ui.login.LoginViewModel" />
+    
+</data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/Theme.Japan"
+        tools:context=".ui.login.LoginFragment">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp10"
+            android:visibility="@{viewModelLoin.baseEvent==BaseEvent.LOADING?View.VISIBLE:View.GONE,default =gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            android:src="@drawable/splash_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--android:layout_marginTop="@dimen/dp90"-->
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/info_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/dp8"
+            android:gravity="center"
+            android:text="@string/enter_your_phone_number"
+            android:theme="@style/TextH1Style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/info_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp4m"
+            android:layout_marginEnd="@dimen/dp8"
+            android:gravity="center"
+            android:text="@string/info_otp"
+            android:theme="@style/TextSimpleStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_no" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="@string/mobile"
+            android:theme="@style/TextSimpleStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_otp" />
+
+        <RelativeLayout
+            android:id="@+id/input_no"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/light_gray_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textMobile"
+            tools:ignore="MissingConstraints">
+
+            <!--        <com.google.android.material.textview.MaterialTextView-->
+            <!--            android:id="@+id/country_code"-->
+            <!--            style="@style/TextSimpleStyle"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_centerVertical="true"-->
+            <!--            android:visibility="gone"-->
+            <!--            android:layout_marginStart="@dimen/_5sdp"-->
+            <!--            android:text="@string/country_code"-->
+            <!--            android:textColor="@color/text_black" />-->
+
+            <!--        android:text="@{viewModelLoin.userNo}"-->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/is_validate"
+                android:background="@null"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:minHeight="48dp"
+                android:onTextChanged="@{(text, start, before, count) -> viewModelLoin.onTextChanged(text)}"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@={viewModelLoin.userNo}"
+                android:textColor="@color/text_black"
+                android:theme="@style/TextSimpleStyle" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/is_validate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_13sdp"
+                android:src="@drawable/ic_right"
+                android:visibility="@{viewModelLoin.isNoValid()?View.VISIBLE:View.GONE}" />
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp58"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginEnd="25dp"
+            android:text="@string/send"
+            android:theme="@style/ButtonStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_no" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

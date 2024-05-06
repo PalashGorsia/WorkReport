@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="green">#43A436</color>
+    <color name="submit_gray">#D4D4D4</color>
+    <color name="text_black">#231814</color>
+    <color name="text_black_light">#87231814</color>
+    <color name="text_yellow">#FF8102</color>
+    <color name="text_yellow_dr">#FF6767</color>
+    <color name="text_in_review">#43A436</color>
+    <color name="text_gray">#777777</color>
+    <color name="light_black">#333333</color>
+    <color name="grey_li">#777</color>
+    <color name="purple_200">#43A436</color>
+    <color name="login_grey">#777777</color>
+
+    <color name="text_color_cancle">#CDC61515</color>
+
+    <color name="weekend_color">#80FFFFFF</color>
+    <color name="black_50">#80000000</color>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.app.workreport.ui.splash.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.app.workreport.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" />
+
+    <action android:id="@+id/actionSplashToLogin"
+        app:destination="@+id/loginFragment"
+        app:popUpTo="@id/splashFragment"
+        app:popUpToInclusive="true"/>
+
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.app.workreport.ui.otp.VerifyOtpFragment"
+        android:label="VerifyOtpFragment"
+        tools:layout="@layout/verify_otp_fragment">
+        <argument android:name="userOtp"
+            app:argType="string"
+            app:nullable="true" />
+        <argument android:name="userNo"
+            app:argType="string"
+            app:nullable="true" />
+
+
+    </fragment>
+
+    <action android:id="@+id/actionLoginToVerifyOtp"
+        app:destination="@+id/verifyOtpFragment"/>
+
+</navigation>

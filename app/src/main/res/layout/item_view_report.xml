@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="taskList"
+            type="com.app.workreport.model.DataTask" />
+    </data>
+
+
+    <LinearLayout
+        xmlns:card="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card:cardBackgroundColor="#FFFFFF"
+            card:cardCornerRadius="@dimen/_5sdp"
+            card:cardElevation="2dp"
+            card:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/card_click"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp8"
+                    android:paddingBottom="@dimen/dp8">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@{taskList.customer.name}"
+                        android:theme="@style/TextStyleReport" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <include layout="@layout/lay_devider" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@string/facility_name"
+                        android:theme="@style/TextSimpleStyle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@{taskList.facility.name}"
+                        android:theme="@style/TextStyleDashboardDate" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@string/date"
+                        android:theme="@style/TextSimpleStyle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_weight="1"
+                        bindDate="@{taskList.date}"
+                        android:theme="@style/TextStyleDashboardDate" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@string/status"
+                        android:theme="@style/TextSimpleStyle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:textColor="@color/green"
+                        android:text="@string/completed2"
+                        android:theme="@style/TextSimpleStyle" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+</layout>
+
+

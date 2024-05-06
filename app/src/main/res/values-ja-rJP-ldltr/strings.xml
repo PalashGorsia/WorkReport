@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">smaStep</string>
+    <string name="enter_your_phone_number">最初の０を除いて電話番号を入力してください</string>
+    <string name="info_otp">4桁の確認コードを送ります</string>
+    <string name="verify_your_phone_number">あなたの電話番号を確認します</string>
+    <string name="enter_your_otp_code_here">４桁のワンタイムパスワードを入力してください</string>
+    <string name="didn_t_receive_otp_resend">ワンタイムパスワードを受信しませんでしたか？</string>
+
+    <string name="mobile">モバイル</string>
+    <string name="send">送信</string>
+    <string name="verify">確認</string>
+    <string name="resend">再送</string>
+    <string name="title_dashboard">ダッシュボード</string>
+    <string name="search_date">顧客を検索</string>
+    <string name="customer_name">顧客名</string>
+    <string name="facility_name">施設名称</string>
+    <string name="address">住所</string>
+    <string name="job_name">作業名</string>
+    <string name="work_report_no">作業報告№</string>
+    <string name="work_plan">作業計画</string>
+
+    <string name="inprogress">•進行中</string>
+    <string name="in_review">•完了</string>
+    <string name="text_inprogress">これから実施する作業</string>
+
+    <string name="completed">•完了</string>
+    <string name="completed2">完了</string>
+
+
+
+    <string name="date">作業日</string>
+    <string name="status">状態</string>
+    <string name="gallery">写真ライブラリから選択 </string>
+    <string name="camera">カメラを使用</string>
+    <string name="cancel">キャンセル</string>
+    <string name="complete">完了した作業</string>
+    <string name="upload_photo">写真をアップロードします</string>
+
+    <string name="other_info">その他の情報</string>
+    <string name="specified_work_time">指定作業時間</string>
+    <string name="facility_name_">施設名称</string>
+
+    <string name="emergency_tel_numbers">緊急電話番号</string>
+    <string name="nts">日環テクノサービス</string>
+
+    <string name="instruction_of_shooting_part">撮影場所の指示</string>
+    <string name="before">作業前</string>
+    <string name="worker_pm">現場からの報告</string>
+
+    <string name="report">報告書</string>
+    <string name="work_report">作業報告</string>
+    <string name="select_status">選択してください</string>
+    <string name="report_info">レポート情報</string>
+    <string name="report_gallery">レポートギャラリー</string>
+
+    <string name="create_report">報告書作成</string>
+    <string name="view_report">レポートを表示</string>
+
+    <string name="last_update">最後の更新</string>
+
+    <string name="msg_failed_to_load_data">データの読み込みに失敗しました！</string>
+    <string name="msg_auth">セッションが期限切れになりました\nもう一度ログインしてください</string>
+    <string name="text_retry">リトライ</string>
+    <!--custom alat message-->
+    <string name="empty_number">電話番号を入力してください</string>
+    <string name="valid_phone_number">有効な電話番号を入力してください</string>
+    <string name="enter_otp">４桁のワンタイムパスワードを入力してください</string>
+    <string name="lost_internet">インターネット接続できません</string>
+    <string name="lost_sever_connection">サーバーに接続できませんでした。</string>
+    <string name="enter_target_name">撮影対象を入力してください</string>
+
+
+
+    <string name="are_you_sure_you_won_t_to_naccept_this_photo">この写真を廃棄してよろしいですか</string>
+    <string name="select">選択する</string>
+    <string name="reserve">予約</string>
+    <string name="discard">破棄</string>
+    <string name="info_logout">ログアウトしてもよろしいですか？</string>
+    <string name="target_name">撮影箇所</string>
+
+    <string name="shooting_type">撮影箇所</string>
+    <string name="tap_to_upload">タップしてアップロード</string>
+    <string name="text_before">作業前</string>
+    <string name="text_after">作業後</string>
+    <string name="takeimage">写真撮影</string>
+    <string name="add_more">さらに追加</string>
+    <string name="comment">コメント</string>
+    <string name="add_comment"><b>コメント</b></string>
+    <string name="write_here"><b>ここに入力してください。</b></string>
+    <string name="send_report">送信</string>
+    <string name="work_date">作業日</string>
+    <string name="phototype">写真タイプA</string>
+    <string name="save">保存する</string>
+    <string name="ok_thanks">次の写真を撮ります</string>
+    <string name="ok">わかりました</string>
+    <string name="your_report_is_saved_to_admin_for_review">報告書が保存されます。</string>
+    <string name="your_image_saved_in_gallery">あなたの撮った写真は保存されました</string>
+    <string name="no_data">何もデータがありません</string>
+    <string name="main_work_contents">主な作業内容</string>
+    <string name="remarks">備考</string>
+    <string name="instruction">指示事項</string>
+    <string name="worker_asigned">担当者</string>
+    <string name="file_attacument">ファイルの添付</string>
+    <string name="desh">--</string>
+    <string name="photos_uploaded_out_of">枚の写真が保存されています。</string>
+    <string name="photos_uploaded_out_of_break_row">枚の写真が保存されています。</string>
+    <string name="report_save">レポートを保存しました</string>
+    <string name="report_sent">送信されたレポート</string>
+    <string name="please_wait_images_are_not_uploaded_to_sever">画像がサーバーにアップロードされないのでお待ちください</string>
+    <string name="file_attached"><u>添付されたファイル</u></string>
+    <string name="no_image">画像がありません</string>
+    <string name="at_work">作業中</string>
+    <string name="error_image_capture">すべてのターゲットの画像をキャプチャしてください</string>
+    <string name="add_row">行を追加する</string>
+    <string name="select_target">対象者を1つ以上選択する</string>
+    <string name="info_all_image_not_selected">一部のターゲット画像はまだ空ですが.\n作業報告書を提出してもよろしいですか？</string>
+    <string name="add_target">ターゲットを追加</string>
+
+    <string name="leave">休暇</string>
+    <string name="select_leave_date_range">休暇の範囲を選択してください。</string>
+
+    <string name="reason">理由</string>
+    <string name="checklist">チェックリスト</string>
+
+    <string name="request_cancelled_sth_went_wrong">リクエストはキャンセルされました。</string>
+    <string name="pls_add_comment">コメントを記述してください。</string>
+    <string name="submit">データの送信</string>
+
+    <string name="why_do_we_use_it">なぜそれを使うのですか？</string>
+    <string name="reference_example">参考例</string>
+    <string name="additional_comment">追加コメント</string>
+    <string name="recipient_comment">受信者のコメント</string>
+
+    <string name="your_report_is_sent_to_admin">レポートは管理者に送信されました</string>
+
+    <string name="inspection">検査</string>
+
+    <string name="pls_mark_all_important_item">必要な質問に答えてください</string>
+
+    <string name="close">閉じる</string>
+
+    <string name="add_leave">休暇を申請します</string>
+    <string name="apply">申込</string>
+    <string name="save_unavailability">休暇を申請します。</string>
+    <string name="sun">日</string>
+    <string name="mon">月</string>
+    <string name="tue">火</string>
+    <string name="wed">水</string>
+    <string name="thu">木</string>
+    <string name="fri">金</string>
+    <string name="sat">土</string>
+
+    <string name="sunday">日曜日</string>
+    <string name="monday">月曜日</string>
+    <string name="tuesday">火曜日</string>
+    <string name="wednesday">水曜日</string>
+    <string name="thursday">木曜日</string>
+    <string name="friday">金曜日</string>
+    <string name="saturday">土曜日</string>
+
+
+    <string name="holiday">祝日</string>
+    <string name="weekend">週末</string>
+    <string name="add_info">情報を追加する</string>
+
+    <string name="info_delete_leave">休暇を取り消していいですか</string>
+    <string name="reject">拒否</string>
+    <string name="accept">受諾</string>
+
+    <string name="accept_reject_request">指名された業務を受諾するか拒否するか決めてください</string>
+    <string name="assigned_job">あなたはには指名された業務があります。</string>
+
+    <string name="submitted">提出</string>
+    <string name="saved">保存されました</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="do_you_want_to_save_changes">変更を保存しますか?</string>
+   <!-- <string name="info_submit_report">Inspection successfully submitted</string>-->
+
+    <string name="submit2">登録する</string>
+
+    <string name="job_already_accepted">Job already accepted.</string>
+    <string name="job_already_rejected">Job already rejected.</string>
+
+    <string name="team_lead_not_accepted_job_yet">あなたのチームリーダーはまだその仕事を受け入れていません。受付をお待ちください。</string>
+
+
+</resources>

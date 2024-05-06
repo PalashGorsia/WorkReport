@@ -1,0 +1,134 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 4,
+    "identityHash": "0ebe4e68548b0454f9231393d69c53ca",
+    "entities": [
+      {
+        "tableName": "WorkPlanData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`workPlanId` TEXT NOT NULL, `comment` TEXT NOT NULL, PRIMARY KEY(`workPlanId`))",
+        "fields": [
+          {
+            "fieldPath": "workPlanId",
+            "columnName": "workPlanId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "comment",
+            "columnName": "comment",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "workPlanId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "imageData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`targetId` TEXT NOT NULL, `imagePath` TEXT NOT NULL, `isSelected` INTEGER NOT NULL, `targetName` TEXT NOT NULL, `planId` TEXT NOT NULL, `shootingType` TEXT NOT NULL, `imageUrl` TEXT NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT)",
+        "fields": [
+          {
+            "fieldPath": "targetId",
+            "columnName": "targetId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imagePath",
+            "columnName": "imagePath",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isSelected",
+            "columnName": "isSelected",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetName",
+            "columnName": "targetName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "planId",
+            "columnName": "planId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shootingType",
+            "columnName": "shootingType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "work_plan_report",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`targetId` TEXT NOT NULL, `targetName` TEXT NOT NULL, `workPlanId` TEXT NOT NULL, PRIMARY KEY(`targetId`))",
+        "fields": [
+          {
+            "fieldPath": "targetId",
+            "columnName": "targetId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetName",
+            "columnName": "targetName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "workPlanId",
+            "columnName": "workPlanId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "targetId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0ebe4e68548b0454f9231393d69c53ca')"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green">
+
+    <View
+        android:id="@+id/exFourContinuousBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp" />
+    <View
+        android:id="@+id/exFourRoundBackgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp" />
+
+    <TextView
+        android:id="@+id/exFourDayText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/_12ssp"
+        tools:text="22" />
+</FrameLayout>
+

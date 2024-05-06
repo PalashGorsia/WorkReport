@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutHader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="6dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/ic_item_health" />
+
+            <TextView
+                android:id="@+id/headerTitle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="3dip"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13ssp" />
+
+
+            <ImageView
+                android:id="@+id/downArrow"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="4dip"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:contentDescription="down_arrow"
+                android:rotation="180"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shape_triangle_light_grey"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvQuestion"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_todo_list_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHader" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">54.190.192.105:6152</domain>
+        <domain includeSubdomains="true">54.168.159.103:6152</domain>
+        <domain includeSubdomains="true">54.150.9.22:6152</domain>
+    </domain-config>
+</network-security-config>

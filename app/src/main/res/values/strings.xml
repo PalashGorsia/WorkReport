@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">WorkReport</string>
+    <string name="enter_your_phone_number">Enter your Phone Number</string>
+    <string name="info_otp">We will send you the 4 digit verification code</string>
+    <string name="mobile">Mobile</string>
+    <string name="send">Send</string>
+    <string name="verify_your_phone_number">Verify your Phone number</string>
+    <string name="enter_your_otp_code_here">Enter your OTP Code here</string>
+    <string name="verify">Verify</string>
+    <string name="didn_t_receive_otp_resend">Didn\'t receive OTP?</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="report">Report</string>
+    <string name="leave">Leaves</string>
+    <string name="apply">Apply</string>
+    <string name="add_leave">Add Leave</string>
+    <string name="work_report">Work Report</string>
+    <string name="work_plan">Work Plan</string>
+    <string name="inprogress">•In-Progress</string>
+    <string name="in_review">•Completed</string>
+    <string name="text_inprogress">In-Progress</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="facility_name">Facility Name</string>
+    <string name="address">Address</string>
+    <string name="job_name">Job Name</string>
+    <string name="completed">•Completed</string>
+    <string name="completed2">Completed</string>
+    <string name="resend">Resend</string>
+    <string name="search_date">Search Customer</string>
+
+    <string name="date">Date</string>
+    <string name="status">Status</string>
+    <string name="select_status">Select Status</string>
+    <string name="complete">Complete</string>
+    <string name="report_info">Report Info</string>
+    <string name="report_gallery">Report Gallery</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="cancel">Cancel</string>
+    <!--    <string name="received_order_no">Received Order No :</string>-->
+    <string name="work_report_no">Work Report No. :</string>
+    <!--    <string name="case_name">Case name</string>-->
+    <string name="other_info">Other Info</string>
+
+    <string name="specified_work_time">Specified work time </string>
+    <string name="facility_name_">Facility Name </string>
+    <string name="emergency_tel_numbers">Emergency tel numbers</string>
+    <string name="nts">NTS</string>
+    <string name="instruction_of_shooting_part">Instruction of shooting part</string>
+    <string name="before">Before</string>
+    <string name="create_report">Create Report</string>
+    <string name="view_report">View Report</string>
+    <string name="worker_pm">(PM→worker)</string>
+    <string name="last_update">Last Update</string>
+
+    <string name="msg_failed_to_load_data">Failed to load data!</string>
+    <string name="msg_auth">Session Expired\nPlease login again</string>
+    <string name="text_retry">Retry</string>
+    <!--custom alat message-->
+    <string name="empty_number">Please enter phone number</string>
+    <string name="valid_phone_number">Please enter valid phone number</string>
+    <string name="enter_otp">Please enter OTP</string>
+    <string name="lost_internet">No Internet Connection</string>
+    <string name="lost_sever_connection">Could not connect to the server.</string>
+    <string name="enter_target_name">Please Enter Target Name</string>
+
+    <!--start copy -->
+    <string name="are_you_sure_you_won_t_to_naccept_this_photo">Are you sure you won\'t to\naccept this photo</string>
+    <string name="select">Select</string>
+    <string name="reserve">Reserve</string>
+    <string name="discard">Discard</string>
+    <string name="info_logout">Are you sure you want\nto logout?</string>
+    <string name="info_delete_leave">Are you sure you want\nto delete leave?</string>
+    <string name="target_name">Target name</string>
+    <string name="shooting_type">Shooting type</string>
+    <string name="tap_to_upload">Tap to Upload</string>
+    <string name="text_before">Before</string>
+    <string name="text_after">After</string>
+    <string name="takeimage">takeImage</string>
+    <string name="add_more">Add More</string>
+    <string name="comment">Comment</string>
+    <string name="add_comment"><b>Comment</b></string>
+    <string name="write_here"><b>Write here..</b></string>
+    <string name="send_report">Send Report</string>
+    <string name="work_date">Work Date</string>
+    <string name="phototype">PhototypeＡ</string>
+    <string name="save">Save</string>
+    <string name="ok_thanks">Ok! thanks</string>
+    <string name="ok">Ok</string>
+    <string name="your_report_is_saved_to_admin_for_review">Your Report is saved to Admin for review.</string>
+    <string name="your_image_saved_in_gallery">Your image saved in gallery</string>
+    <string name="no_data">No Data Found!</string>
+    <string name="main_work_contents">Main work contents</string>
+    <string name="remarks">Remarks</string>
+    <string name="instruction">Instruction</string>
+    <string name="worker_asigned">Worker Asigned</string>
+    <string name="file_attacument">File Attacument</string>
+    <string name="desh">--</string>
+    <string name="photos_uploaded_out_of">photos uploaded out of</string>
+    <string name="photos_uploaded_out_of_break_row">photos uploaded\nout of</string>
+    <string name="report_save">Report Saved</string>
+    <string name="report_sent">Report Sent</string>
+    <string name="please_wait_images_are_not_uploaded_to_sever">Please wait images are not uploaded\nto sever</string>
+    <string name="file_attached"><u>File attached</u></string>
+    <string name="no_image">No Image</string>
+    <string name="at_work">At Work</string>
+    <string name="error_image_capture">Please Capture Image for every Target</string>
+    <string name="add_row">Add Row</string>
+    <string name="select_target">Select at list one Target</string>
+    <string name="info_all_image_not_selected">Some of the target images are still empty.\nAre you sure you want to submit work report?</string>
+    <string name="add_target">Add Target</string>
+
+    <string name="select_leave_date_range">Select Leave Date Range</string>
+    <string name="reason">Reason</string>
+    <string name="checklist">Check List</string>
+    <string name="submit">Submit</string>
+    <string name="submit2">Submit</string>
+
+    <string name="why_do_we_use_it">Why do we use it?</string>
+    <string name="reference_example">Reference Example</string>
+    <string name="request_cancelled_sth_went_wrong">Request cancelled or something went wrong.</string>
+    <string name="pls_add_comment">Please add comment</string>
+    <string name="additional_comment">Additional Comment</string>
+    <string name="recipient_comment">Recipient Comment</string>
+
+
+    <string name="your_report_is_sent_to_admin">Your Report is sent to Admin</string>
+
+    <string name="inspection">Inspection</string>
+
+    <string name="pls_mark_all_important_item">Please answer the required questions</string>
+
+    <string name="close">Close</string>
+    <string name="save_unavailability">Save Leave</string>
+    <string name="sun">SUN</string>
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thu">THU</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+
+
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="holiday">Holiday</string>
+    <string name="weekend">Weekend</string>
+    <string name="add_info">Add info</string>
+
+    <string name="accept_reject_request">please accept or reject!</string>
+    <string name="assigned_job">You have assigned job :</string>
+    <string name="submitted">Submitted</string>
+    <string name="saved">Saved</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="do_you_want_to_save_changes">Do you want to save changes?</string>
+
+    <string name="job_already_accepted">Job already accepted.</string>
+    <string name="job_already_rejected">Job already rejected.</string>
+
+    <string name="team_lead_not_accepted_job_yet">Your team has not accepted the job yet. Please wait for acceptance.</string>
+    <!-- <string name="info_submit_report">Inspection successfully submitted</string>-->
+
+</resources>

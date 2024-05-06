@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="taskList"
+            type="com.app.workreport.model.DataTask" />
+        <variable
+            name="showImageCount"
+            type="Boolean" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card:cardBackgroundColor="#FFFFFF"
+            card:cardCornerRadius="@dimen/_5sdp"
+            card:cardElevation="2dp"
+            card:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/inProgressCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp14"
+                    android:paddingBottom="@dimen/dp14">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layView"
+                        android:orientation="horizontal">
+                        <RelativeLayout
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/dp10">
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/dateIcon"
+                                android:src="@drawable/ic_date"
+                                />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/dateIcon"
+                                android:layout_marginStart="@dimen/dp8"
+                                android:paddingTop="4.5dp"
+                                android:layout_centerVertical="true"
+                                bindDate="@{taskList.date}"
+                                android:theme="@style/TextStyleDashboardDate" />
+
+                        </RelativeLayout>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/dp10"
+                            android:text="@string/inprogress"
+                            android:id="@+id/status"
+                            android:theme="@style/TextInProgressStyle" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layView"
+                        android:layout_marginTop="-5dp"
+                        android:orientation="horizontal"
+                        android:visibility="@{showImageCount?View.VISIBLE:View.GONE}">
+
+                        <View
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/imageCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp1"
+                                android:paddingStart="@dimen/dp0"
+                                android:paddingEnd="@dimen/dp4"
+                                android:text="@string/photos_uploaded_out_of"
+                                android:theme="@style/TextProgressImageStyle" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </RelativeLayout>
+
+
+
+
+                <include layout="@layout/lay_devider" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@string/customer_name"
+                        android:theme="@style/TextSimpleStyle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@{taskList.customer.name}"
+                        android:theme="@style/TextStyleDashboardDate" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@string/facility_name"
+                        android:theme="@style/TextSimpleStyle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@{taskList.facility.name}"
+                        android:theme="@style/TextStyleDashboardDate" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@string/address"
+                        android:theme="@style/TextSimpleStyle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@{taskList.job.address.length()>0?taskList.job.address:`-`}"
+                        android:theme="@style/TextStyleDashboardDate" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@string/job_name"
+                        android:theme="@style/TextSimpleStyle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:text="@{taskList.job.name}"
+                        android:theme="@style/TextStyleDashboardDate" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+</layout>

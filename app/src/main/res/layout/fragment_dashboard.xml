@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.app.workreport.ui.dashboard.ui.dashboard.DashboardViewModel" />
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainUI"
+    android:layout_marginTop="@dimen/dp20"
+    tools:context=".ui.dashboard.ui.dashboard.DashboardFragment">
+    <include
+        layout="@layout/lay_search_view"
+        android:id="@+id/search_view"/>
+
+
+    <ProgressBar
+        android:id="@+id/progressLoadState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_50sdp" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/swipeRefresh"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dp10"
+        app:layout_constraintTop_toBottomOf="@+id/search_view">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            tools:listitem="@layout/item_view_dashboard"
+            android:layout_marginBottom="@dimen/dp10"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            android:id="@+id/rvTaskList" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
